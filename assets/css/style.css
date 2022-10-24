@@ -85,7 +85,6 @@ nav img {
 
 nav ul:not(nav .mobile ul) {
   display: none;
-  justify-content: space-between;
 }
 
 nav ul:not(nav .mobile ul) li a {
@@ -307,6 +306,11 @@ footer p {
 
   nav .bar {
     display: none;
+  }
+
+  nav ul:not(nav .mobile ul) {
+    display: flex;
+    justify-content: space-between;
   }
 
   header img.header {
