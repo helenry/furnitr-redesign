@@ -68,6 +68,7 @@ h3.subtitle {
 /* header */
 header {
   height: 100vh;
+  position: relative;
 }
 
 /* nav */
@@ -82,12 +83,12 @@ nav img {
   height: 30px;
 }
 
-nav ul {
+nav ul:not(nav .mobile ul) {
   display: none;
   justify-content: space-between;
 }
 
-nav ul li a {
+nav ul:not(nav .mobile ul) li a {
   font-size: 18px;
 }
 
@@ -99,6 +100,10 @@ nav .bar {
   width: 100vw;
   height: 100vh;
   background-color: #fffaf5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .mobile .top {
@@ -129,7 +134,7 @@ nav .bar {
 }
 /* nav end */
 
-header div {
+header div:not(div.mobile, div.top, div.height) {
   height: 100%;
   display: flex;
   align-items: center;
@@ -245,7 +250,6 @@ article#inspiration .content .gallery img {
 aside .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 aside img {
